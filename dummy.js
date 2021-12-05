@@ -23,6 +23,25 @@ const fetchTodos = () => {
 const logTodos = () => {
     console.log(arrayOfTodos)
 }
+const cleartodos = () => {
+     arrayOfTodos= []
+     let todoList = document.getElementById('todo-list').innerHTML = ""
+     return todoList
+}
+const filtertodos = () => {
+    const result = arrayOfTodos.filter(checkid); 
+    let todoList = document.getElementById('quantitiy').value
+    console.log (todoList)
+    function checkid(id) {
+        return id == todoList;
+        
+    } 
+    console.log (result)
+    return result      
+}
+
+
+
 
 const populateTodos = () => {
     let todoList = document.getElementById('todo-list');
